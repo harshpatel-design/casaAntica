@@ -42,7 +42,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="w-full max-h-[900px] h-screen relative">
+    <section className="w-full max-h-[600px] sm:max-h-[700px] md:max-h-[800px] lg:max-h-[900px] h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen relative">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         slidesPerView={1}
@@ -81,13 +81,13 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="absolute inset-0 z-10 flex flex-col mt-0 min-[1400px]:mt-[120px] items-center justify-center text-center text-white px-5"
+                className="absolute inset-0 z-10 flex flex-col mt-0 sm:mt-[40px] md:mt-[60px] lg:mt-[80px] xl:mt-[120px] items-center justify-center text-center text-white px-4 sm:px-5 md:px-6"
               >
                 <motion.p
                   initial={{ opacity: 0, y: -150, scale: 0.0 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-                  className="uppercase tracking-[3px] font-normal text-sm mb-5 font-mona"
+                  className="uppercase tracking-[2px] sm:tracking-[3px] font-normal text-[10px] sm:text-xs md:text-sm mb-3 sm:mb-4 md:mb-5 font-mona"
                 >
                   {slide.subtitle}
                 </motion.p>
@@ -96,7 +96,7 @@ export default function Hero() {
                   initial={{ opacity: 0, scale: 0.0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.4, duration: 1.2, ease: "easeOut" }}
-                  className="font-faculty text-7xl 3xl:text-8xl leading-tight whitespace-pre-line"
+                  className="font-faculty text-[28px] sm:text-[36px] md:text-[48px] lg:text-[60px] xl:text-[72px] 3xl:text-8xl leading-tight whitespace-pre-line"
                 >
                   {slide.title}
                 </motion.h1>
@@ -105,7 +105,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 40, scale: 0.0 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-                  className="mt-6 text-lg md:text-xl font-mona"
+                  className="mt-4 sm:mt-5 md:mt-6 text-sm sm:text-base md:text-lg lg:text-xl font-mona"
                 >
                   {slide.desc}
                 </motion.p>
@@ -114,7 +114,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 150, scale: 0.0 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ delay: 0.4, duration: 1.2, ease: "easeOut" }}
-                  className="group cursor-pointer relative overflow-hidden rounded-full border border-white px-10 mt-[48px] py-4 text-white"
+                  className="group cursor-pointer relative overflow-hidden rounded-full border border-white px-6 sm:px-8 md:px-10 mt-[24px] sm:mt-[32px] md:mt-[40px] lg:mt-[48px] py-3 sm:py-3 md:py-4 text-white text-sm sm:text-base"
                 >
                   <span className="absolute left-0 top-full h-[200%] w-[200%] rounded-[40%] bg-white transition-all duration-700 ease-in-out group-hover:top-[-50%]"></span>
 

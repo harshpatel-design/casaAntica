@@ -53,7 +53,7 @@ const categories = [
 
 function Categoty() {
   return (
-    <section className="relative py-[120px] overflow-hidden">
+    <section className="relative py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px] overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="https://demo2.pavothemes.com/aunuca/wp-content/uploads/2025/02/h1-background01.jpg"
@@ -65,7 +65,7 @@ function Categoty() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
       <div className="relative z-10 max-w-[1320px] mx-auto px-5">
-        <div className="flex items-center justify-between mb-[40px]">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-[30px] sm:mb-[40px] gap-4">
           <motion.h2
             initial={{
               opacity: 0,
@@ -84,17 +84,17 @@ function Categoty() {
               duration: 1.2,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="text-white text-[48px] font-faculty leading-[1.1]"
+            className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[48px] font-faculty leading-[1.1]"
           >
             Shopping by category
           </motion.h2>
 
-          <div className="flex items-end gap-[12px]">
-            <button className="category-prev w-[71px] transition-colors duration-500 h-[41px] rounded-full bg-transparent backdrop-blur-sm border border-white/50 text-white text-[20px] flex items-center justify-center cursor-pointer hover:bg-[#BA4B40] hover:border-none hover:scale-105">
+          <div className="flex items-end gap-[8px] sm:gap-[12px]">
+            <button className="category-prev w-[50px] sm:w-[60px] md:w-[71px] transition-colors duration-500 h-[35px] sm:h-[38px] md:h-[41px] rounded-full bg-transparent backdrop-blur-sm border border-white/50 text-white text-[14px] sm:text-[16px] md:text-[20px] flex items-center justify-center cursor-pointer hover:bg-[#BA4B40] hover:border-none hover:scale-105">
               <FaArrowLeft />
             </button>
 
-            <button className="category-next w-[71px] transition-colors duration-500 h-[41px] rounded-full border border-white/50 text-white text-[20px] flex items-center backdrop-blur-sm justify-center cursor-pointer hover:bg-[#BA4B40] hover:border-none hover:scale-105">
+            <button className="category-next w-[50px] sm:w-[60px] md:w-[71px] transition-colors duration-500 h-[35px] sm:h-[38px] md:h-[41px] rounded-full border border-white/50 text-white text-[14px] sm:text-[16px] md:text-[20px] flex items-center backdrop-blur-sm justify-center cursor-pointer hover:bg-[#BA4B40] hover:border-none hover:scale-105">
               <FaArrowRight />
             </button>
           </div>
@@ -137,14 +137,14 @@ function Categoty() {
                 initial={{
                   opacity: 0,
                   y: 0,
-                  x: (-40),
+                  x: -40,
                   scale: 0.9,
                   filter: "blur(10px)",
                 }}
                 whileInView={{
                   opacity: 1,
                   y: 0,
-                  x:0,
+                  x: 0,
                   scale: 1,
                   filter: "blur(0px)",
                 }}
@@ -154,9 +154,9 @@ function Categoty() {
                   duration: 1.5,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="bg-white rounded-[30px] p-[30px] text-center group cursor-pointer"
+                className="bg-white rounded-[20px] sm:rounded-[25px] md:rounded-[30px] p-[20px] sm:p-[25px] md:p-[30px] text-center group cursor-pointer"
               >
-                <div className="relative w-[250px] h-[250px] mx-auto rounded-full overflow-hidden mb-[30px] group">
+                <div className="relative w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[250px] lg:h-[250px] mx-auto rounded-full overflow-hidden mb-[20px] sm:mb-[25px] md:mb-[30px] group">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -165,16 +165,16 @@ function Categoty() {
                   />
 
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-500">
-                    <div className="absolute group/mm scale-0 group-hover:scale-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#BA4B40] flex items-center justify-center h-[60px] w-[60px] rounded-full transition-all duration-500 hover:bg-black">
-                      <FaArrowRight className="text-white text-2xl -rotate-45 transition-all duration-500 group-hover/mm:rotate-0" />
+                    <div className="absolute group/mm scale-0 group-hover:scale-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#BA4B40] flex items-center justify-center h-[45px] w-[45px] sm:h-[50px] sm:w-[50px] md:h-[60px] md:w-[60px] rounded-full transition-all duration-500 hover:bg-black">
+                      <FaArrowRight className="text-white text-lg sm:text-xl md:text-2xl -rotate-45 transition-all duration-500 group-hover/mm:rotate-0" />
                     </div>
                   </div>
                 </div>
-                <h3 className="text-[24px] leading-[1.2] font-faculty font-medium text-black mb-[5px]">
+                <h3 className="text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px] leading-[1.2] font-faculty font-medium text-black mb-[5px]">
                   {item.title}
                 </h3>
 
-                <p className="text-[#8B8B8B] text-[18px]">{item.products}</p>
+                <p className="text-[#8B8B8B] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px]">{item.products}</p>
               </motion.div>
             </SwiperSlide>
           ))}

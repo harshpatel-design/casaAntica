@@ -133,7 +133,7 @@ function Navbar() {
   ];
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
+    <header className="hidden lg:block absolute top-0 left-0 right-0 z-50">
       <nav className="w-full px-[87px] mt-[36px] flex items-center justify-between  relative">
         <div className="flex items-center logo">
           <Image
