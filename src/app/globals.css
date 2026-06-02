@@ -79,6 +79,10 @@ body {
   font-family: var(--font-body);
 }
 
+.xxl {
+  min-width: 1550px;
+}
+
 .font-faculty {
   font-family: var(--font-faculty);
 }
@@ -152,4 +156,14 @@ body {
 
 .animate-spin-slow {
   animation: spinSlow 12s linear infinite;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #BA4B40;
 }

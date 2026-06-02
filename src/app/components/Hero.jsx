@@ -53,7 +53,7 @@ export default function Hero() {
         }}
         speed={800}
         autoplay={{
-          delay: 10000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         pagination={{
